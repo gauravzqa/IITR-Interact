@@ -1,0 +1,16 @@
+body{
+	text-align: center;
+}
+input, select{
+	padding: 12px 16px;
+	margin: 10px;
+}
+input.sub{
+	background-color: #333;
+	color: white;
+	border: none;
+}
+input.sub:hover{
+	background-color: #555;
+	cursor: pointer;
+}
