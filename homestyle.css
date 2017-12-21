@@ -5,11 +5,11 @@
 
 body{
     margin:0;
-    background-color: #52BE80; 
+    background-color: #45B39D; 
 }
 
 .head{
-    background-color: #52BE80;
+    background-color: #45B39D;
     max-width: 100%;
     
 }
@@ -22,9 +22,14 @@ h1{
     top: 0;
 }
 
-
+.About{
+    background-color: #333;
+    margin: 20px;
+    padding: 60px;
+}
 
 h2{
+    color:white;
     text-align: center; 
     font-size: 50px;
     margin: 30px 0;
@@ -33,15 +38,55 @@ h2{
 }
 
 p.about{
+    color:white;
+    background-color: #808B96; 
+    
     margin: 10px 100px;
     text-align: center;
     justify-content: space-between;
     font-size: 25px;
 }
 
+.LC{
+    background-color: #FFFFFF;
+    padding:10px 200px ;
+
+}
+
 .lc{
     width: 100%;
+    margin: 0 auto;
+    background-color: #333;
+    
 }
+
+.info{
+    background-color: #333;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+    font-size: 25px;
+}
+.am{
+    font-size: 40px;
+    text-align: center;
+    margin: 20px;
+    text-decoration-line: underline;
+}
+.blah{
+    text-align: left;
+    float: left;
+}
+
+.clearfix{
+    overflow: auto;
+    clear: right;
+}
+.gaurav{
+    float: right;
+    width: 150px;
+}
+
 
 /* menu base styles */
 
@@ -61,6 +106,7 @@ nav a{
     color:#fff;
     display: block;
     padding: 10px;
+    font-size: 30px;
 }
 
 nav a:hover{
