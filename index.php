@@ -1,41 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>login</title>
-	<link rel="stylesheet" type="text/css" href="login.css">
-  <script type="text/javascript" src="login.js"></script>
-</head>
-<body>
-	<div class="header">
-    <h2>Home page</h2>
-  </div>
+<?php
 
-  <div class="content">
-      <?php 
-      var_dump($_SESSION['success']);
-      if (isset($_SESSION['success'])) :?>
-         <div class="error success">
-            <h3>
-              <?php
-                  echo $_SESSION['success'];
-                  unset($_SESSION['success']);
-                  echo $_SESSION['username'];
-              ?>
-            </h3>
-         </div>
-      <?php endif ?>
-
-      <?php if (isset($_SESSION['username'])): ?> 
-        <p>Welcome <strong><?php echo $_SESSION['username'] ?></strong></p>
-        <p><a href="index.php?logout=1" style="color:red;">Logout</a></p>
-      <?php  endif ?>
-  </div>
-
-
-
-</body>
-</html>
+require("vendor/torophp/torophp/src/Toro.php");
 
 
 
 
+
+class h{
+    function get() {
+    	echo "hi";
+    }
+}
+
+Toro::serve(array(
+    "/login" => "h",
+    "/user" => "h",
+    "/product/([a-zA-Z0-9-_]+)" => "ProductHandler",
+    "/manufacturer/([a-zA-Z]+)" => "ManufacturerHandler"
+));
+
+?>

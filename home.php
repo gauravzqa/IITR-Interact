@@ -49,15 +49,35 @@
 	<p class="am">About ME</p>
 	
 	<div class="blah">
+	<img class="gaurav" src="images/gaurav" width="400px" height="400px" >
 	<p class="intro">I am a 18 years old undergraduate student currently pursuing my B.Tech degree in the field of electronics and communication Engg. at one of the most prestigious institute of the country IIT Roorkee.</p>
-	<p class="">I am a keen tech. enthusiast who believe in creating and working in productive projects, who is of the notion </p>
+
+	<p class="intro">I am a keen tech. enthusiast who believe in creating and working in productive projects, who is of the notion </p>
 	</div>
-	<div class="notion">
+	<div class="intro" id="notion">
 	<p>DREAM it !!</p>
 	<p>BELIEVE it !!</p>
 	<p>BUILD it !!</p>
 	</div>
 </div>
+
+<footer>
+	<div class="f">
+		<div class="icons">
+			<div class="logo"><a href="https://www.facebook.com"><img class="fb" src="images/fb.png" width="35px" height="35px"></a></div>
+			<div class="logo"><a href="www.gmail.com"><img class="G" src="images/g.png" width="35px" height="35px"></a></div>
+			<div class="logo"><a href="https://github.com/gauravzqa"><img class="gh" src="images/git.png" width="35px" height="35px"></a></div>
+			<div class="logo"><a href="https://www.linkedin.com/in/gaurav-pal-578ab9153/"><img class="ln" src="images/linkedin.png" width="35px" height="35px"></a></div>
+		</div>
+		
+		<div class="end" >
+			<div class="finish">Home</div>
+			<div class="finish">About us</div>
+			<div class="finish">help us</div>
+			<div class="finish">Terms and Conditions</div>
+		</div>
+	</div>
+</footer>
 
 </body>
 </html>

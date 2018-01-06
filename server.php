@@ -2,6 +2,7 @@
 	
 	session_start();
 
+	//variable declaration
 	$username="";
 	$email="";
 	$errors=array();
@@ -9,6 +10,8 @@
 // connect to the database
 
 $db=mysqli_connect('localhost', 'root', 'gauraviitr', 'registration');
+
+
 //if create button is clicked
 if (isset($_POST['create'])){
 	$username = mysqli_real_escape_string($db, $_POST['username']);
@@ -41,9 +44,11 @@ if (isset($_POST['create'])){
 		$sql="INSERT INTO users(username, email, password) 
 				VALUES ('$username', '$email', '$password')";
 		mysqli_query($db, $sql);
-		$_SESSION['username'] = $username;
+		
 		$_SESSION['success'] = "You are now logged  in";
-		header('location: login.php'); // redirect to home page
+		$_SESSION['username'] = $username;
+		
+		header('location: user.php'); // redirect to home page
 	}
 }
 
@@ -55,10 +60,10 @@ if (isset($_POST['login'])) {
 	//ensure that form fields are filled properly
 
 	if(empty($username)) {
-		array_push($errors, "Username is empty");
+		array_push($errors, "Username is required");
 	}
 	if(empty($password)) {
-		array_push($errors, "Password is empty");
+		array_push($errors, "Password is required");
 	}
 
 	if (count($errors)==0) {
@@ -70,7 +75,7 @@ if (isset($_POST['login'])) {
 			//log user in
 			$_SESSION['username'] = $username;
 			$_SESSION['success'] = "you are now logged in";
-			header('location: index.php'); // redirect to home page
+			header('location: user.php'); // redirect to home page
 
 		}else {
 			array_push($errors, "wrong username/password combination ");
@@ -83,6 +88,8 @@ if (isset($_POST['login'])) {
 if (isset($_GET['logout'])) {
 	unset($_SESSION['username']);
 	session_destroy();
-	header('location: index.php');
+	header('location: login.php');
 }
 ?>
+
+ 

@@ -7,6 +7,10 @@
   <script type="text/javascript" src="login.js"></script>
 </head>
 <body>
+  <div class="backimage">
+    <img class="image" src="images/q.png">
+  </div>
+
 	<div class="login-page">
   		<div class="form">
     		<form class="login-form" method="POST">
@@ -21,7 +25,3 @@
 </form>
 </body>
 </html>
-
-
-
-
