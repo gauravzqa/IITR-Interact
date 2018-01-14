@@ -69,6 +69,7 @@ if (isset($_POST['login'])) {
 	if (count($errors)==0) {
 		$password = md5($password);  //encrypt password before comparing with that from database
 		$query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+		
 		$result = mysqli_query($db, $query);
 		if(mysqli_num_rows($result)==1){
 
@@ -90,6 +91,57 @@ if (isset($_GET['logout'])) {
 	session_destroy();
 	header('location: login.php');
 }
+
+
+// for search box
+
+
+$db2=mysqli_connect('localhost', 'root', 'gauraviitr', 'search');
+
+//if submit btn is clicked
+
+if (isset($_GET['Submit'])) {
+	$user=mysqli_escape_string($db2, $_GET['user']);
+	$skill1=mysqli_escape_string ($db2, $_GET['skill1']);
+	$skill2=mysqli_escape_string($db2, $_GET['skill2']);
+	$skill3=mysqli_escape_string($db2, $_GET['skill3']);
+
+	$user = strtolower($user);
+	$skill1 = strtolower($skill1);
+	$skill2 = strtolower($skill2);
+	$skill3 = strtolower($skill3);
+
+	//ensure that form fields are filled
+	if (empty($user)) {
+		array_push($errors, 'enter username');
+	}
+	if (empty($skill1)) {
+		array_push($errors, 'input skill entry');
+	}
+	if (empty($skill2)) {
+		array_push($errors, 'input skill entry');
+	}
+	if (empty($skill3)) {
+		array_push($errors, 'input skill entry');
+	}
+
+
+	//if no error is there
+	if (count($errors)==0) {
+		$sql2 = "INSERT INTO skillsearch(user, skill1, skill2, skill3)
+		 VALUES ('$user','$skill1','$skill2','$skill3')";
+
+		mysqli_query($db2, $sql2);
+		header('location:user.php');
+	}
+	else{
+		array_push($errors, 'fill the complete form');
+		header('location : addSkill.php');
+	}
+
+}
+
+
 ?>
 
  

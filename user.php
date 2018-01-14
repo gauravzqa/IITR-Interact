@@ -32,8 +32,8 @@
     <nav>
       <ul>
         <li class="home" ><a href="home.php">Home</a></li>
-        <li><a href="#Connect" data-scroll="true" data-id="#connect">Connect</a></li>
-        <li><a href="#About" data-scroll="true" data-id="#about" >About</a></li>
+        <li><a href="addSkill.php" data-scroll="true" data-id="#connect">Add Skills</a></li>
+        <li><a href="#About" data-scroll="true" data-id="#user-about" >About</a></li>
         <li><a href="#Contact" data-scroll="true" data-id="#contact">Contact</a></li>
         <li></li>
       </ul>
@@ -81,6 +81,7 @@
                       ?>
                     </h3>
                 </div>
+
                 <div class="welcome">
                     <?php endif ?>
                     <!-- logged in user information -->
@@ -120,6 +121,7 @@
     
   </div>
 </div>
+
 </body>
 </html>
 

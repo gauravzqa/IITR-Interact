@@ -1,3 +1,5 @@
+
+<?php include('server.php') ?> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,10 +29,17 @@
 			<div class="field"><img src="images/rubics-cube.jpg" class="image" name="rubics-cube"  width=200pxx" height=200pxx"><p style="text-align:center;">rubics-cube</p></div>
 			<div class="field"><img src="images/debating.png" class="image" name="debating" width="200px" height="200px" ><p style="text-align:center;">debating</p></div>
 		</div>
-		<div class="submit-box" >
-			<input class="submit" type="submit" name="Submit" value="Submit">
-		</div>
 	</div> 
+
+	<div class="skill-form" >
+		<form method="get" >
+			<input type="text" name="user" value="<?php echo $_SESSION['username'] ?>" >
+			<input type="text" name="skill1" placeholder="input skill name" >
+			<input type="text" name="skill2" placeholder="input skill name" >
+			<input type="text" name="skill3" placeholder="input skill name" >
+			<input class="submit" type="submit" name="Submit" value="Submit">
+		</form>
+	</div>
 
 </body>
 </html>
